@@ -2,7 +2,7 @@ const buttonGrid = document.getElementById('button-grid');
     const buttons = buttonGrid.children;
     let clickableButtons = 3; // Сколько кнопок можно нажать
     let clickedButtons = 0; // Сколько кнопок нажато
-    let score = 0; // Сколько бонусов заработали (вот эту переменную желатильно потом в бдшку хавать, ну или на пофиг просто сделать подсчёт, думаю и этого хватит)
+    let score = 0; // Сколько бонусов заработали
     const scoreElement = document.getElementById('score');
 
     // берём короче 3 рандомные кнопки который будут давать бонусы
