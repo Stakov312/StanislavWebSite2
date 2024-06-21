@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра</title>
+    <link rel="stylesheet" href="game.css">
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UpVLsU9hp9QkWhwGhOdH2SIW8NjF6yq3mPRD7xls_cszXSFBdQE0zAprLBdyF7jj6bV1m9Ww-CiAiIRJc30qUAp3KVGs523xX-N5rqjk1yuapIOgM8SVQIkowejF4SgjjAX1apVNLdXXXYo89UCgk3cdgvGqcZyZ-rsXyBc-j9fD8daoTcqMonQYyG3uZemUa3r6M0KwkJr9F8mxvhLSgTdyjNIjDj0HX1RpadflhF2HqcS6oLFgytpOzCtMTHHenhR_KsMe0hbAbCGhPXq5JQ" charset="UTF-8"></script></head>
+<body>
+  <a href="index.html">
+    <h2>НАЗАД</h2>
+  </a>
+  <div class="container">
+    <div id="score">Бонусы: 0</div>
+    <div class="button-grid" id="button-grid">
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+      <button class="button"></button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+  <script> 
+    const url = 'https://6673b8c175872d0e0a936b30.mockapi.io/XZ/';
+    let points = 0;
+    const pointsElement = document.getElementById('points');
+    const accumulateButton = document.getElementById('accumulateButton');
+const sendButton = document.getElementById('sendButton');
+
+// Получаем id пользователя из localStorage
+const userId = localStorage.getItem('id'); // Если id не найден, используем значение по умолчанию '1'
+
+// Загружаем текущее количество баллов пользователя из базы данных
+fetch(url + userId)
+    .then(response => response.json())
+    .then(data => {
+        points = parseFloat(data.point) || 0; // Получаем баллы из базы данных или устанавливаем значение по умолчанию 0
+        pointsElement.textContent = points;
+    })
+    .catch(error => console.error('Error:', error));
+
+accumulateButton.addEventListener('click', () => {
+    points++;
+    pointsElement.textContent = points;
+});
+
+sendButton.addEventListener('click', () => {
+    // Отправляем данные на сервер
+    const data = {
+        point: points.toFixed(2)
+    };
+
+    fetch(url + userId, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+});
+</script>
+  </script>
+
+  
+</body>
+</html>
+
+

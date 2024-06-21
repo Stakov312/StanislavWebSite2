@@ -1,0 +1,96 @@
+[
+    {
+        "id": "jfhgbvnscs",
+        "name": "Клавиатура",
+        "price": 45,
+        "desc": "Текст ради текста, чтобы был текст",
+        "img": "images/img-1.jpg",
+        "rating": 3,
+        "reliability": "good",
+        "title": "DevacePC",
+        "model": "lenovo"
+      },
+      {
+        "id": "Mouse",
+        "name": "Игровая мышка",
+        "price": 100,
+        "title": "DevacePC",
+        "desc": "Текст ради текста, чтобы был текст",
+        "img": "images/img-2.jpg",
+        "rating": 4,
+        "reliability": "good",
+        "model": "lenovo"
+      },
+      {
+        "id": "Microfon",
+        "name": "Микрофон",
+        "price": 43,
+        "desc": "Крутой микрофон чтобы говорить в него",
+        "title": "DevacePC",
+        "img": "images/img-3.jpg",
+        "rating": 4,
+        "reliability": "good",
+        "model": "dexp"
+      },
+
+      {
+        "id": "Gamepad",
+        "name": "Геймпад",
+        "price": 300,
+        "title": "DevaceConsole",
+        "desc": "Текст ради текста, чтобы был текст",
+        "img": "images/img-4.jpg",
+        "rating": 2,
+        "reliability": "good",
+        "model": "dexp"
+
+      },
+    
+      {
+        "id": "Headphones",
+        "name": "Наушники",
+        "price": 45,
+        "desc": "Текст ради текста, чтобы был текст",
+        "title": "DevacePC",
+        "img": "images/img-5.jpg",
+        "rating": 5,
+        "reliability": "good",
+        "model": "dexp"
+      },
+      {
+        "id": "Ready PC",
+        "name": "Готовый ПК",
+        "price": 100,
+        "desc": "Текст ради текста, чтобы был текст",
+        "title": "pc",
+        "img": "images/img-6.jpg",
+         "rating": 1,
+        "reliability": "n",
+        "model": "asus"
+      },
+      {
+        "id": "Mifdasngsdg",
+        "name": "Монитор",
+        "price": 250,
+        "title": "Monitor",
+        "desc": "Текст ради текста, чтобы был текст",
+        "img": "images/img-7.jpg",
+         "rating": 2,
+        "reliability": "n",
+        "model": "dexp"
+      },
+      {
+        "id": "thyfhc",
+        "name": "Игровой принтер",
+        "price": 300,
+        "title": "DevacePC",
+        "desc": "Текст ради текста, чтобы был текст",
+        "img": "images/img-8.jpg",
+        "rating": 5,
+        "reliability": "n",
+        "model": "dexp"
+      }
+      
+
+     
+  ]
